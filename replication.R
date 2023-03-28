@@ -29,7 +29,7 @@ library(lmtest)
     ###2.1 Table####
       #Stargazer creates table with summary statistics for all variables in dataset
     stargazer(data, type = "html", title="Descriptive Statistics", 
-              digits=1, out="/Users/sara/Documents/IHEID Academic/Semester 1/Statistics 1/Problem Sets/Final/desc2.doc")
+              digits=1, out="desc2.doc")
 
     ###2.2 Graphically: Histograms####
     ggplot(data, aes(x = rulelaw)) + 
@@ -138,7 +138,7 @@ library(lmtest)
                                        "Uneven Econ Dev:HDI",
                                        "Uneven Econ Dev:Refugee Strain"),
                   dep.var.labels = "Rule of Law",
-                  out="/Users/sara/Documents/IHEID Academic/Semester 1/Statistics 1/Problem Sets/Final/regressiontables.doc")
+                  out="regressiontables.doc")
                   
         ####Standardised Coefficients####
         lm.beta(lm2)     
@@ -210,10 +210,5 @@ library(lmtest)
             ##re-do regression
               lm5_noinfl <- lm(rulelaw ~ econ*hdi + refugees + arms_log + jail_log, data = data_noinfl)
               summary(lm5_noinfl) #not much changes for these results
-              
-              
-            ##FIN! :) 
-            
-            
 
             
